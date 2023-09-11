@@ -7,28 +7,28 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Hash;
 
-class AdminUserSeeder extends Seeder
+class dataCarSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $jsonPath = storage_path('dataJson/users.json');
+        $jsonPath = storage_path('dataJson/cars.json');
         $json = File::get($jsonPath);
         $data = json_decode($json, true);
 
         foreach ($data as $item) {
-            DB::table('users')->insert([
+            DB::table('cars')->insert([
                 'id' => Str::uuid(),
-                'username' => $item['username'],
-                'email' => $item['email'],
-                'password' => $item['password'],
-                'role' => $item['role'],
-                'phoneNumber' => $item['phoneNumber'],
-                'address' => $item['address'],
+                'name' => $item['name'],
+                'description' => $item['description'],
+                'imageUrl' => $item['imgUrl'],
+                'location' => $item['location'],
+                'price' => $item['price'],
+                'typeId' => $item['typeId'],
+                'userId' => $item['UserId'],
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
