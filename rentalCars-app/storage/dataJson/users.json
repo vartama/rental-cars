@@ -1,0 +1,18 @@
+[
+  {
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "password123",
+    "role": "admin",
+    "phoneNumber": "123-456-7890",
+    "address": "123 Main St, Anytown, USA"
+  },
+  {
+    "username": "staff",
+    "email": "staff@gmail.com",
+    "password": "password123",
+    "role": "staff",
+    "phoneNumber": "123-456-7890",
+    "address": "123 Main St, Anytown, USA"
+  }
+]
